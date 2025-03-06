@@ -19,3 +19,8 @@
 
 4
 ㄱ-2,ㄴ-1,ㄷ-4,ㄹ-3,ㅁ-5
+
+5-2
+ㄱ-@PathVariable,ㄴ-findById()
+5-3
+ㄱ-findAll()

@@ -6,8 +6,13 @@ import com.example.Hong_park_springBoot.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @Slf4j
@@ -20,7 +25,7 @@ public class ArticleController {
         return "articles/new";
     }
 
-    @PostMapping("/article/create")
+    @PostMapping("/articles/create")
     public String createArticle(ArticleForm form){ //form: dto,new.mustache의 name=""과 연결되어있음,
         // new에서 submit버튼 누르면 create로 페이지 이동하면서 form데이터를 전송받아 DTO객체에 담겨진다
         log.info(form.toString());
@@ -32,5 +37,26 @@ public class ArticleController {
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
         return "";
+    }
+
+    @GetMapping("/articles/{id}")
+    public String show(@PathVariable Long id, Model model){
+        log.info("id = " + id);
+        //1.리파지터리 이용해 데이터 가져오기
+        Article articleEntity = articleRepository.findById(id).orElse(null);
+        //2.모델에 데이터 등록하기
+        model.addAttribute("article",articleEntity);
+        //3.뷰 페이지 반환
+        return "articles/show";
+    }
+
+    @GetMapping("/articles")
+    public String index(Model model){
+        //모든 데이터 가져오기
+        ArrayList<Article> articleEntityList = articleRepository.findAll();
+        //모델에 데이터 등록하기
+        model.addAttribute("articleList",articleEntityList);
+        //뷰 페이지 리턴
+        return "articles/index";
     }
 }
