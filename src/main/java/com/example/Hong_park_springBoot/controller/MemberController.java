@@ -25,6 +25,11 @@ public class MemberController {
         return "members/new";
     }
 
+    @GetMapping("/members/new")
+    public String newMemberForm(){
+        return "members/new";
+    }
+
     @PostMapping("/join")
     public String createMembers(MemberForm form){
         //1.dto to entity
@@ -35,7 +40,7 @@ public class MemberController {
         Member saved = memberRepository.save(member);
         log.info(saved.toString());
         //3.show page
-        return "";
+        return "redirect:/members/" + saved.getId();
     }
 
     @GetMapping("members/{id}")
@@ -51,9 +56,9 @@ public class MemberController {
     @GetMapping("/members")
     public String index(Model model){
         //엔티티
-        ArrayList<Member> members = memberRepository.findAll();
+        ArrayList<Member> memberList = memberRepository.findAll();
         //모델에 등록
-        model.addAttribute("members",members);
+        model.addAttribute("memberList",memberList);
         //뷰페이지
         return "members/index";
     }

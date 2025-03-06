@@ -24,3 +24,9 @@
 ㄱ-@PathVariable,ㄴ-findById()
 5-3
 ㄱ-findAll()
+
+6
+ㄱ-링크,ㄴ-리다이렉트
+
+7-2
+1-3-4-2
