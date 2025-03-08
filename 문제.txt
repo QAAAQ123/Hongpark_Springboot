@@ -32,3 +32,28 @@
 1-3-4-2
 7-3
 ㄱ-Post,ㄴ-데이터 읽기(Read),ㄷ-Update
+
+8
+2
+
+9-2
+ㄱ-insert into article(id,title,content) values(4,'제목4','내용4');
+ㄴ-select id,email from member where id=3;
+ㄷ-update comment set nickname='익명' where id=1;
+ㄹ-delete from orders where id=4;
+
+9-3
+SELECT * FROM coffee WHERE price=5100;
+
+9셀프체크
+INSERT INTO burgers
+VALUES
+(1,'행운버거 골드',5300,222,540,25),
+(2,'트리플 치즈버거',6300,219,619,36),
+(3,'빅맥',5300,223,583,27);
+
+10
+ㄱ-4,ㄴ-2,ㄷ-5,ㄹ-3,ㅁ-1
+
+11
+ㄱ-3,ㄴ-4,ㄷ-1,ㄹ-5,ㅁ-2
