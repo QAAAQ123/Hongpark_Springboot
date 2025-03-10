@@ -62,3 +62,6 @@ VALUES
 2
 12-3
 ㄱ-트랜잭션,ㄴ-@Transactional,ㄷ-롤백
+
+13
+ㄱ-테스트 케이스,ㄴ-디버깅,ㄷ-리팩터링,ㄹ-@SpringBootTest,ㅁ-@Transactional
