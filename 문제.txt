@@ -65,3 +65,23 @@ VALUES
 
 13
 ㄱ-테스트 케이스,ㄴ-디버깅,ㄷ-리팩터링,ㄹ-@SpringBootTest,ㅁ-@Transactional
+
+14-2
+ㄱ-다대일,ㄴ-@ManyToOne,ㄷ-외래키,ㄹ-article_id,ㅁ-@JoinColumn
+14-3
+ㄱ-JpaRepository,ㄴ-@Query,ㄷ-XML,ㄹ-@DataJpaTest
+
+15
+ㄱ-엔티티,ㄴ-DTO,ㄷ-서비스,ㄹ-REST 컨트롤러
+15-4
+4
+15-5
+ㄱ-Patch,ㄴ-IllegalArgumentException
+15-5
+ㄱ-@DeleteMapping,ㄴ-@Pathvariable,ㄷ-@Transactional
+셀프체크
+생성: /pizza
+조회(단일): /pizza/{id}
+조회(목록): /pizza
+수정: pizza/{id}
+삭제: pizza/{id}
