@@ -112,3 +112,11 @@ modal.addEventListener("show.bs.modal",function(event) {
     modalTitle.innerText = title;
     modalText.innerText = text;
 });
+
+19
+30
+셀프체크
+const nodeList = document.querySelectorAll(".prerequisite");
+nodeList.forEach((item) => {
+    item.style.textDecoration = "line-through";
+});
