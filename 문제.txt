@@ -95,3 +95,6 @@ List<TeamDto> teamDtoList = teamService.teams(groupId);
 //모델에 등록
 model.addAttribute("groupname",groupname.getName());
 model.addAttribute("teamDtoList",teamDtoList);
+
+17
+1

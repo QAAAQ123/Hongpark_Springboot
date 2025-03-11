@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>셀프 체크 17</title>
+</head>
+<body>
+    <h1>Hello, <span id="target">World</span>!</h1>
+    <input type="text" id="text-input">
+    <button id="send-btn">전송</button>
+    <script>
+        //전송 버튼 변수화
+        const button = document.querySelector("#send-btn");
+        //변화 요소 가져오기
+        const input = document.querySelector("#text-input");
+        //클릭 이벤트 감지
+        button.addEventListener("click",function() {
+            //변화된 값 가져오기
+            const str = input.value;
+            //변화 텍스트 삭제
+            input.value = "";
+            //문서에 반영
+            target.innerText = str;
+        });
+    </script>
+</body>
+</html>
